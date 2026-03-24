@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LMS Access - Sign in to Moodle for courses, progress tracking, and assessments.">
+  <title>LMS Access | Grant English Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.svg" alt="Grant English Academy" class="logo-img">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Workplace English Courses</a></li>
+          <li><a href="mini-lessons.html">Mini Lessons</a></li>
+          <li><a href="welcome-to-america.html">Welcome to America</a></li>
+          <li><a href="corporate-training.html">Corporate Training</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="lms-access.html" class="btn-lms active" aria-current="page">LMS Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--lms">
+      <div class="container">
+        <h1>LMS Access</h1>
+        <p>Sign in to Moodle for courses, activities, and progress tracking</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div style="max-width: 480px; margin: 0 auto;">
+          <div class="card" style="padding: 2rem;">
+            <h2 class="mb-2">Sign In to Moodle</h2>
+            <p class="mb-3" style="color: var(--gray-600);">All courses, mini-lessons, Welcome to America scenarios, and assessments are delivered through our Moodle LMS.</p>
+            
+            <!-- Replace # with your actual Moodle URL -->
+            <a href="https://grantenglishacademy.com/moodle" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; justify-content: center; margin-bottom: 1rem;">
+              Go to Moodle LMS
+            </a>
+            
+            <p style="font-size: 0.875rem; color: var(--gray-600);">Don't have an account? <a href="contact.html" style="color: var(--accent); font-weight: 500;">Contact us</a> to get started.</p>
+          </div>
+
+          <div class="card mt-2" style="padding: 1.5rem;">
+            <h3 class="mb-2">What You'll Find in Moodle</h3>
+            <ul style="list-style: disc; padding-left: 1.5rem; color: var(--gray-700);">
+              <li>Workplace English courses</li>
+              <li>Mini lessons (5–15 min)</li>
+              <li>Welcome to America scenarios</li>
+              <li>Quizzes and activities</li>
+              <li>Progress tracking and reports</li>
+              <li>Recordings and submissions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Grant English Academy home">
+            <img src="assets/logo.svg" alt="Grant English Academy" class="footer-logo-img">
+          </a>
+          <p>Professional Workplace English training.</p>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="mini-lessons.html">Mini Lessons</a></li>
+            <li><a href="welcome-to-america.html">Welcome to America</a></li>
+            <li><a href="lms-access.html">LMS Access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="corporate-training.html">Corporate Training</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="lms-access.html">LMS Access</a></li>
+            <li><a href="corporate-training.html">Corporate Training</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Grant English Academy.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      document.getElementById('nav-menu').classList.toggle('active', !expanded);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Grant English Academy - Workplace English training inquiries.">
+  <title>Contact | Grant English Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.svg" alt="Grant English Academy" class="logo-img">
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="courses.html">Workplace English Courses</a></li>
+          <li><a href="mini-lessons.html">Mini Lessons</a></li>
+          <li><a href="welcome-to-america.html">Welcome to America</a></li>
+          <li><a href="corporate-training.html">Corporate Training</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+          <li><a href="lms-access.html" class="btn-lms">LMS Access</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--contact">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch for course inquiries, corporate training, or LMS access</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div style="display: grid; gap: 2rem; max-width: 900px; margin: 0 auto;">
+          <div class="card" style="padding: 2rem;">
+            <h2 class="mb-2">Send a Message</h2>
+            <p class="mb-3" style="color: var(--gray-600);">For individual learners, corporate training inquiries, or LMS access, please use the form below or email us directly.</p>
+            
+            <form action="#" method="post">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                  <option value="general">General Inquiry</option>
+                  <option value="learner">Individual Learner</option>
+                  <option value="corporate">Corporate Training</option>
+                  <option value="lms">LMS Access</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+          </div>
+
+          <div class="card-grid card-grid-2">
+            <div class="card">
+              <div class="card-icon">✉️</div>
+              <h3>Email</h3>
+              <p>Contact us via email for the fastest response.</p>
+              <a href="mailto:info@grantenglishacademy.com" style="color: var(--accent); font-weight: 500;">info@grantenglishacademy.com</a>
+            </div>
+            <div class="card">
+              <div class="card-icon">🌐</div>
+              <h3>Social Media</h3>
+              <p>YouTube and Instagram for short lessons and tips.</p>
+              <p style="font-size: 0.875rem; color: var(--gray-600);">Links to be added when branding is finalized.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Grant English Academy home">
+            <img src="assets/logo.svg" alt="Grant English Academy" class="footer-logo-img">
+          </a>
+          <p>Professional Workplace English training.</p>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="mini-lessons.html">Mini Lessons</a></li>
+            <li><a href="welcome-to-america.html">Welcome to America</a></li>
+            <li><a href="lms-access.html">LMS Access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="corporate-training.html">Corporate Training</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="lms-access.html">LMS Access</a></li>
+            <li><a href="corporate-training.html">Corporate Training</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Grant English Academy.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      document.getElementById('nav-menu').classList.toggle('active', !expanded);
+    });
+    // Pre-select corporate if coming from corporate page
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('type') === 'corporate') {
+      document.getElementById('subject').value = 'corporate';
+    }
+  </script>
+</body>
+</html>
